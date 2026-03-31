@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <p class="hero-label">Senior DevOps Engineer &middot; AI Engineer</p>
+        <h1>Bamiche Onu</h1>
+        <p class="hero-sub">
+            13+ years building cloud infrastructure, CI/CD pipelines, and now 
+            intelligent AI systems. From Kubernetes clusters to multi-agent 
+            trading bots — I ship things that scale.
+        </p>
+        <a href="#projects" class="btn">View Projects</a>
+    </div>
+</section>
+
+<section id="projects" class="projects">
+    <h2>AI Projects</h2>
+    <div class="project-grid">
+        {% for project in projects %}
+        <a href="{{ url_for('project_detail', project_id=project.id) }}" class="project-card">
+            <span class="project-icon">{{ project.icon }}</span>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.tagline }}</p>
+            <div class="tech-tags">
+                {% for t in project.tech %}
+                <span class="tag">{{ t }}</span>
+                {% endfor %}
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="skills" class="skills">
+    <h2>Core Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-group">
+            <h3>☁️ Cloud & Infrastructure</h3>
+            <div class="tech-tags">
+                <span class="tag">AWS</span>
+                <span class="tag">Azure</span>
+                <span class="tag">Terraform</span>
+                <span class="tag">CloudFormation</span>
+                <span class="tag">EKS</span>
+                <span class="tag">ECS</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">OpenShift</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <h3>🔄 CI/CD & DevOps</h3>
+            <div class="tech-tags">
+                <span class="tag">GitLab CI</span>
+                <span class="tag">GitHub Actions</span>
+                <span class="tag">Jenkins</span>
+                <span class="tag">CodePipeline</span>
+                <span class="tag">Helm</span>
+                <span class="tag">Bicep</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <h3>💻 Languages & Frameworks</h3>
+            <div class="tech-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Ruby on Rails</span>
+                <span class="tag">.NET</span>
+                <span class="tag">Bash</span>
+                <span class="tag">FastAPI</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <h3>🤖 AI & ML</h3>
+            <div class="tech-tags">
+                <span class="tag">OpenAI</span>
+                <span class="tag">LangGraph</span>
+                <span class="tag">CrewAI</span>
+                <span class="tag">RAG</span>
+                <span class="tag">ChromaDB</span>
+                <span class="tag">Embeddings</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <h3>📊 Monitoring & Security</h3>
+            <div class="tech-tags">
+                <span class="tag">Prometheus</span>
+                <span class="tag">Grafana</span>
+                <span class="tag">Datadog</span>
+                <span class="tag">CloudWatch</span>
+                <span class="tag">IAM</span>
+                <span class="tag">Wiz</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-date">2021 — Present</div>
+            <div class="timeline-content">
+                <h3>DevOps Engineer</h3>
+                <p class="timeline-company">Fullscript</p>
+                <p>Migrated .NET microservices to Kubernetes, managed EKS/ECS with Terraform, 
+                   architected CI/CD pipelines in GitLab, and supported critical events like 
+                   Black Friday at scale. Also deployed Azure web and function apps with 
+                   OpenShift and Bicep IaC.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2020 — 2021</div>
+            <div class="timeline-content">
+                <h3>Senior AWS Specialist</h3>
+                <p class="timeline-company">TVO</p>
+                <p>Implemented AWS Well-Architected Framework, designed landing zones with 
+                   Control Tower, containerized React workloads, and led daily standups 
+                   using Scrum-Kanban methodology.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2018 — 2020</div>
+            <div class="timeline-content">
+                <h3>DevOps Engineer</h3>
+                <p class="timeline-company">Thales Group</p>
+                <p>Managed IAM policies, developed CloudFormation stacks, troubleshot 
+                   networking issues across VPCs, and configured auto-scaling with ELB.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">2016 — 2018</div>
+            <div class="timeline-content">
+                <h3>Cloud Engineer</h3>
+                <p class="timeline-company">Nexonia</p>
+                <p>Configured load balancers, managed RDS databases, set up AWS CI/CD 
+                   pipelines, and collaborated with dev teams on version control workflows.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2>About</h2>
+    <p>
+        Senior DevOps Engineer with 13+ years in IT, now expanding into AI engineering. 
+        I bring deep expertise in cloud infrastructure, container orchestration, and 
+        CI/CD to the world of intelligent systems. Currently building multi-agent AI 
+        applications and RAG-powered assistants with Python, while continuing to ship 
+        production infrastructure at scale.
+    </p>
+    <p class="about-education">
+        MSc Environmental Science & Sustainability Engineering — University of Aberdeen<br>
+        BSc Environmental Science — University of Benin<br>
+        AWS Certified Developer (Associate) &middot; Certified Kubernetes Administrator
+    </p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <p>Interested in collaborating or have questions about my work?</p>
+    <p class="contact-email">cheonu.dev@gmail.com</p>
+    <a href="mailto:cheonu.dev@gmail.com" class="btn">Say Hello</a>
+    <p class="contact-links">
+        <a href="https://github.com/cheonu" target="_blank">GitHub</a>
+        <span class="link-sep">&middot;</span>
+        <a href="https://www.linkedin.com/in/cheonudev/" target="_blank">LinkedIn</a>
+    </p>
+</section>
+{% endblock %}

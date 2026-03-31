@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.title }} — Portfolio{% endblock %}
+
+{% block content %}
+<section class="project-detail">
+    <a href="{{ url_for('index') }}#projects" class="back-link">&larr; Back to projects</a>
+    <span class="project-icon-lg">{{ project.icon }}</span>
+    <h1>{{ project.title }}</h1>
+    <p class="project-tagline">{{ project.tagline }}</p>
+
+    <div class="tech-tags">
+        {% for t in project.tech %}
+        <span class="tag">{{ t }}</span>
+        {% endfor %}
+    </div>
+
+    <div class="project-body">
+        <h2>Overview</h2>
+        <p>{{ project.description }}</p>
+
+        <h2>Highlights</h2>
+        <ul>
+            {% for h in project.highlights %}
+            <li>{{ h }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %}
