@@ -8,6 +8,9 @@
     <span class="project-icon-lg">{{ project.icon }}</span>
     <h1>{{ project.title }}</h1>
     <p class="project-tagline">{{ project.tagline }}</p>
+    {% if project.company %}
+    <p class="project-company-detail">{{ project.company }}</p>
+    {% endif %}
 
     <div class="tech-tags">
         {% for t in project.tech %}
