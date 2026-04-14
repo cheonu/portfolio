@@ -9,89 +9,80 @@ PROJECTS = [
         "tagline": "Multi-agent AI platform automating retail clienteling workflows",
         "company": "Salesfloor",
         "description": (
-            "Architected a modular multi-agent AI platform to automate retail clienteling "
-            "workflows — generating personalized associate tasks and communications end-to-end, "
-            "from customer data qualification through content drafting. Designed a planner-led "
-            "agent architecture using A2A (Agent-to-Agent) protocol and MCP (Model Context Protocol), "
-            "with a central planner orchestrating specialized downstream agents via standardized "
-            "JSON-RPC with discoverable agent cards."
+            "Led design and implementation of a multi-agent AI platform automating retail "
+            "clienteling workflows — generating personalised associate tasks and communications "
+            "end-to-end, from customer data qualification through content drafting. Defined a "
+            "standardised agent communication protocol (A2A/JSON-RPC) with discoverable agent "
+            "cards, enabling a central planner to orchestrate specialised agents and reuse them "
+            "across future workflows."
         ),
         "tech": ["Python 3.12", "LangGraph", "LangChain", "MCP", "A2A", "LangSmith", "OpenTelemetry"],
         "highlights": [
-            "Planner-led agent architecture with A2A protocol and MCP for standardized agent communication",
-            "Deterministic SQL and rules-based logic for filtering; LLMs reserved for reasoning-heavy tasks",
-            "Full observability with LangSmith for LLM tracing and OpenTelemetry for distributed telemetry",
-            "End-to-end debugging and performance monitoring across agent hops",
-            "Reusable architectural pattern with roadmap for production hardening and AI governance",
+            "Standardised A2A/JSON-RPC agent communication with discoverable agent cards",
+            "Selective LLM usage — deterministic SQL and rules for filtering, LLMs only for reasoning-heavy tasks",
+            "Full observability via LangSmith for LLM tracing and OpenTelemetry for distributed telemetry",
+            "End-to-end debugging across agent hops",
+            "Reusable architectural pattern with roadmap for production hardening, data integration, and AI governance",
         ],
         "icon": "🤖",
     },
     {
         "id": "crypto-trading-agent",
         "title": "Agentic Crypto Trading System",
-        "tagline": "7 concurrent LLM agents competing in live crypto markets",
+        "tagline": "7 concurrent LLM agents with multi-agent debate reducing noise entries by 85%",
         "company": "Personal Project",
         "description": (
-            "Architected a multi-agent trading system running 7 concurrent pods on GKE, "
-            "each powered by a distinct LLM (GPT-4o, Claude, Gemini, Deepseek, Grok, "
-            "+ rule-based baseline) enabling robust ensemble decision-making. Features a "
-            "multi-agent debate mechanism where AI agents reach consensus through structured "
-            "argumentation before executing trades."
+            "Deployed 7 concurrent trading pods on GKE, each running a distinct LLM "
+            "(GPT-4o, Claude, Gemini, Deepseek, Grok + rule-based baseline), with a "
+            "multi-agent debate mechanism achieving consensus before trade execution — "
+            "reducing noise entries by 85% (from 12–21 trades to 1–2 per pod)."
         ),
-        "tech": ["Python", "LangGraph", "CrewAI", "GKE", "Helm", "Terraform"],
+        "tech": ["Python", "LangGraph", "CrewAI", "HuggingFace", "PyTorch", "GKE", "Helm", "Terraform"],
         "highlights": [
-            "7 concurrent agents: GPT-4o, Claude, Gemini, Deepseek, Grok, baseline",
-            "Multi-agent debate for trade consensus via structured argumentation",
-            "Real-time RSI, EMA, VWAP, regime detection, sentiment analysis",
-            "Day trading engine with stop-loss, take-profit, trailing stops, fee-aware filtering",
-            "Deployed via Helm to GKE with Terraform IaC and Artifact Registry CI/CD",
+            "7 concurrent agents with multi-agent debate reducing noise entries by 85%",
+            "Fine-tuned CryptoBERT and FinBERT with LoRA/PEFT achieving 95.4% validation accuracy",
+            "70/30 weighted ensemble NLP inference across 30–40 RSS headlines per cycle",
+            "Win rate improved from 17–25% to 100% with 2.5:1 reward/risk ratio",
+            "Docker image cut by 49% (5.3GB → 2.7GB) with cold-start-free CPU inference",
+            "Jenkins pipeline with GCP Cloud Build integration eliminating ephemeral storage bottlenecks",
         ],
         "icon": "📈",
     },
     {
         "id": "genai-service-desk",
         "title": "GenAI Service Desk Intelligence Platform",
-        "tagline": "RAG-powered knowledge base for instant incident resolution",
+        "tagline": "Natural-language querying over enterprise knowledge base reducing MTTR",
         "company": "Symcor",
         "description": (
-            "Built a GenAI-powered service desk solution that allows support teams to query "
-            "the entire knowledge base in natural language — surfacing accurate, context-grounded "
-            "answers instantly rather than searching through ticket histories and documentation. "
-            "Includes a production RAG pipeline ingesting documents from Google Drive with "
-            "automated sync, chunking, and semantic search."
+            "Delivered a natural-language query interface over the enterprise knowledge base "
+            "(tickets, runbooks, SOPs, FAQs), replacing manual documentation searches and "
+            "reducing MTTR for recurring incidents."
         ),
         "tech": ["Python", "FastAPI", "OpenAI", "RAG", "ChromaDB", "LangChain"],
         "highlights": [
-            "RAG pipeline ingesting tickets, runbooks, SOPs, FAQs into ChromaDB vector store",
-            "Google Drive document sync with Sentence Transformers embeddings",
-            "Semantic search across large enterprise corpora",
-            "Reduced MTTR for recurring incidents",
-            "Multi-tenant K8s deployment with auto-scaling, persistent vector storage, and TLS",
-            "Async FastAPI REST endpoints consumed by React Native mobile app",
+            "RAG pipeline with automated chunking, embedding, and incremental sync into ChromaDB",
+            "Prompt-based endpoints via FastAPI supporting chat UI and programmatic service desk integration",
+            "Replaced manual documentation searches, reducing MTTR for recurring incidents",
         ],
         "icon": "🎯",
     },
     {
-        "id": "farm-ai-assistant",
-        "title": "Farm AI Assistant",
-        "tagline": "RAG-powered mobile assistant for agricultural operations",
-        "company": "Personal Project",
+        "id": "enterprise-knowledge-assistant",
+        "title": "Enterprise GenAI Knowledge Assistant",
+        "tagline": "RAG pipeline over Google Drive delivering source-attributed answers",
+        "company": "",
         "description": (
-            "Built a production RAG pipeline ingesting WhatsApp conversation data for "
-            "context-aware agricultural advice with source attribution. Implemented semantic "
-            "search using Sentence Transformers embeddings and ChromaDB vector store. Deployed "
-            "to Kubernetes with auto-scaling, self-healing, persistent vector storage, and TLS. "
-            "Integrated with React Native mobile app via async FastAPI REST endpoints."
+            "Developed a RAG pipeline ingesting documents from Google Drive (PDFs, Docs, Sheets), "
+            "delivering context-aware, source-attributed answers grounded in live business content."
         ),
-        "tech": ["Python", "FastAPI", "OpenAI", "ChromaDB", "RAG", "Docker", "Kubernetes"],
+        "tech": ["Python", "FastAPI", "OpenAI", "ChromaDB", "Google Drive API", "Kubernetes"],
         "highlights": [
-            "RAG pipeline with WhatsApp chat ingestion",
-            "Vector search using ChromaDB embeddings",
-            "Context-augmented LLM responses with source attribution",
-            "Kubernetes deployment with auto-scaling and self-healing",
-            "React Native mobile app integration",
+            "Automated document sync and chunking via Google Drive API with Sentence Transformers embeddings",
+            "Semantic search across enterprise corpora in ChromaDB",
+            "Kubernetes deployment with auto-scaling, self-healing pods, persistent vector storage, TLS via cert-manager",
+            "Multi-tenant role-scoped retrieval",
         ],
-        "icon": "🌾",
+        "icon": "📚",
     },
 ]
 
@@ -101,11 +92,10 @@ EXPERIENCE = [
         "company": "Salesfloor",
         "period": "Oct 2024 — Present",
         "bullets": [
-            "Designed and built a headless agentic AI application using LLM-driven decision loops, integrating into CRM and workflow systems",
-            "Authored full agentic backend — orchestration logic, tool-calling interfaces, prompt chains, async task execution as containerised microservices",
-            "Automated database operations (provisioning, backups, failover, schema migrations) reducing manual DBA intervention by over 60%",
-            "Owned end-to-end release coordination for iOS/Android apps and built Jenkins CI/CD pipelines with automated testing and artifact promotion",
-            "Established MLOps observability with model performance monitoring, drift detection, and alerting across inference services",
+            "Developed and shipped a headless agentic AI application in Python — LLM decision loops, tool-calling interfaces, prompt chains, and async task execution — deployed as containerised microservices integrating with clients' CRM systems",
+            "Reduced manual DBA intervention by 60%+ by automating database operations (provisioning, backups, failover, schema migrations) with Python and infrastructure-as-code",
+            "Coordinated iOS and Android release trains and delivered Jenkins CI/CD pipelines with automated testing, artifact promotion, and environment-specific deployment strategies",
+            "Established MLOps observability practices: model performance monitoring, drift detection, and alerting across inference services",
         ],
     },
     {
@@ -113,11 +103,9 @@ EXPERIENCE = [
         "company": "Symcor Inc.",
         "period": "Dec 2022 — Present",
         "bullets": [
-            "Built GenAI-powered service desk intelligence solution with natural language knowledge base queries replacing manual searches",
-            "Implemented RAG pipeline ingesting structured and unstructured data into vector store with automated chunking and incremental sync",
-            "Designed AI-powered check fraud detection system using Python and Databricks with MLflow tracking",
-            "Built feature engineering pipelines in PySpark for real-time fraud scoring at scale",
-            "Deployed fraud detection models as inference endpoints on Azure ML with alerting and audit logging",
+            "Delivered an AI-powered check fraud detection system on Databricks — trained and versioned ML classification models (MLflow) on financial transaction data, with PySpark feature engineering pipelines processing high-volume data into model-ready features",
+            "Deployed fraud detection inference endpoints on Azure ML, integrated into the transaction pipeline with compliance-grade alerting and audit logging",
+            "Developed the GenAI service desk intelligence platform (see Featured Projects), replacing manual knowledge searches with natural-language querying across enterprise documentation",
         ],
     },
     {
@@ -125,11 +113,9 @@ EXPERIENCE = [
         "company": "Fullscript",
         "period": "Dec 2021 — Oct 2024",
         "bullets": [
-            "Migrated .NET microservices to Kubernetes, improving deployment frequency by 40%",
-            "Managed EKS/ECS infrastructure serving millions of requests with Terraform and CloudFormation",
-            "Architected GitLab CI/CD pipelines supporting 50+ engineers across multiple product teams",
-            "Designed Helm charts for K8s workloads including RBAC, secrets management, and ingress controllers",
-            "Supported Black Friday traffic spikes through auto-scaling and load testing; integrated Wiz for SOC-2 compliance",
+            "Improved deployment frequency by 40% and cut production downtime by migrating .NET microservices to Kubernetes with Helm-managed workloads, RBAC, and ingress controllers",
+            "Managed EKS/ECS infrastructure serving millions of requests; delivered GitLab CI/CD pipelines supporting 50+ engineers across multiple product teams",
+            "Sustained reliability through Black Friday traffic spikes via auto-scaling and load testing; achieved SOC-2 compliance through Wiz security scanning integration",
         ],
     },
     {
@@ -137,10 +123,8 @@ EXPERIENCE = [
         "company": "TVO",
         "period": "Sep 2020 — Dec 2021",
         "bullets": [
-            "Conducted AWS Well-Architected Framework reviews across 5+ products",
-            "Designed AWS Landing Zone using Control Tower for hybrid multi-account governance",
-            "Containerized React applications and deployed via S3 static hosting with CloudFront CDN",
-            "Led Scrum/Kanban ceremonies and mentored junior DevOps engineers",
+            "Led AWS Well-Architected reviews across 5+ products, closing architectural gaps and designing a Landing Zone with Control Tower for hybrid multi-account governance",
+            "Containerised React applications, deployed via S3/CloudFront CDN, and mentored junior DevOps engineers across Scrum/Kanban delivery cycles",
         ],
     },
     {
@@ -148,9 +132,8 @@ EXPERIENCE = [
         "company": "Thales Group",
         "period": "Jan 2018 — Sep 2020",
         "bullets": [
-            "Developed Python automation frameworks replacing fragile manual runbooks",
-            "Built Python data pipeline utilities aggregating CloudWatch metrics into operational dashboards",
-            "Authored CloudFormation templates and enforced IAM least-privilege across 20+ AWS accounts, cutting costs by 25%",
+            "Developed Python automation frameworks replacing manual infrastructure runbooks, and built CloudWatch metric pipeline utilities improving incident detection across teams",
+            "Reduced infrastructure costs by 25% through auto-scaling group configuration and ELB health checks; enforced IAM least-privilege policies across 20+ AWS accounts",
         ],
     },
     {
@@ -158,9 +141,8 @@ EXPERIENCE = [
         "company": "Nexonia",
         "period": "Oct 2016 — Jan 2018",
         "bullets": [
-            "Designed Python backend services and REST API integrations for expense management workflows",
-            "Developed Lambda functions powering event-driven pipelines with SQS/SNS and DLQ error handling",
-            "Configured multi-AZ RDS deployments (Aurora, MySQL) with read replicas achieving 99.9% availability",
+            "Delivered Python backend services and REST API integrations for expense management workflows, and developed Lambda-based event-driven pipelines with SQS/SNS messaging and DLQ handling",
+            "Configured multi-AZ RDS deployments (Aurora, MySQL) with automated failover achieving 99.9% availability",
         ],
     },
     {
@@ -168,9 +150,7 @@ EXPERIENCE = [
         "company": "National Grid",
         "period": "Jul 2011 — Oct 2016",
         "bullets": [
-            "Wrote Python scripts and automation tools managing critical energy infrastructure systems",
-            "Developed internal dashboards and alerting systems for real-time infrastructure health metrics",
-            "Maintained high-availability on-premises and hybrid systems for fault-tolerant design",
+            "Wrote Python monitoring tools, automation scripts, and internal dashboards for critical UK energy infrastructure — building early foundations in high-stakes, always-on software and fault-tolerant systems design",
         ],
     },
 ]
