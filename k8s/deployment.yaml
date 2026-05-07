@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: portfolio
-        image: europe-west1-docker.pkg.dev/project-e4ad9f18-82a4-4e98-ae4/portfolio/portfolio:latest
+        image: us-central1-docker.pkg.dev/crypto-trader-agent-2026/portfolio/portfolio:v1
         ports:
         - containerPort: 5000
         resources:
